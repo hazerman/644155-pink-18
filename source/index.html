@@ -2,11 +2,63 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <header class="header">
+      <nav class="site-navigation header__site-navigation">
+        <div class="site-navigation__container">
+          <a class="site-logo site-navigation__site-logo">
+
+          </a>
+          <button class="site-navigation__button-toggle" type="button">
+            <span class="visually-hidden">Развернуть меню</span>
+          </button>
+          <div class="site-navigation__wrapper">
+            <ul class="site-navigation__list">
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="#">Главная</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="#">Фотографии</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="#">Конкурс</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="header__container">
+        <div class="promo header__promo">
+          <p class="promo__tagline">Взгляните на жизнь иначе!</p>
+          <a class="promo__button-download" href="https://www.apple.com/ios/app-store/">Скачать приложение</a>
+          <ul class="promo__store-list">
+            <li class="promo__store-item">
+              <a class="promo__store-link" href="https://www.apple.com/ios/app-store/">
+                <span class="visually-hidden">Наше приложение в App Store</span>
+              </a>
+            </li>
+            <li class="promo__store-item">
+              <a class="promo__store-link" href="https://play.google.com/store/apps">
+                <span class="visually-hidden">Наше приложение в Google Play</span>
+              </a>
+            </li>
+            <li class="promo__store-item">
+              <a class="promo__store-link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+                <span class="visually-hidden">Наше приложение в Microsoft Store</span>
+              </a>
+            </li>
+          </ul>
+          <small class="promo__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</small>
+        </div>
+      </div>
+    </header>
 
   </body>
 </html>
