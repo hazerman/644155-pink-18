@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Пинк||Фотографии</title>
+  </head>
+  <body>
+
+    <header class="header">
+      <nav class="site-navigation header__site-navigation">
+        <div class="site-navigation__container">
+          <a class="site-logo site-navigation__site-logo" href="index.html">
+
+          </a>
+          <button class="site-navigation__button-toggle" type="button">
+            <span class="visually-hidden">Развернуть меню</span>
+          </button>
+          <div class="site-navigation__wrapper">
+            <ul class="site-navigation__list">
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link site-navigation__link--current">Фотографии</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="form.html">Конкурс</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="https://htmlacademy.ru/">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="header__container">
+        <h1 class="header__tagline">Фотографии пользователей</h1>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="photo main__photo">
+        <div class="photo__container">
+          <p class="photo__tagline">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+          <ul class="photo__list">
+            <li class="photo__item photo__item--main">
+              <picture></picture>
+              <div class="photo__user-wrapper">
+                <span class="photo__user-info">Анна <span>(5 минут назад)</span></span>
+                <p class="photo__user-comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <span class="photo__user-like">Нравится: 215</span>
+                <span class="photo__panorama-label">Панорама дня</span>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture></picture>
+              <div class="photo__user-wrapper">
+                <span class="photo__user-info">Левон <span>(5 часов назад)</span></span>
+                <p class="photo__user-comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <span class="photo__user-like">Нравится: 356</span>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture></picture>
+              <div class="photo__user-wrapper">
+                <span class="photo__user-info">Антон <span>(12 часов назад)</span></span>
+                <p class="photo__user-comment">Соседи будут рады!</p>
+                <span class="photo__user-like">Нравится: 666</span>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture></picture>
+              <div class="photo__user-wrapper">
+                <span class="photo__user-info">Борис <span>(20 часов назад)</span></span>
+                <p class="photo__user-comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <span class="photo__user-like">Нравится: 215</span>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture></picture>
+              <div class="photo__user-wrapper">
+                <span class="photo__user-info">Сергей <span>(25 часов назад)</span></span>
+                <p class="photo__user-comment">Самая кубанская в мире!</p>
+                <span class="photo__user-like">Нравится: 4</span>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture></picture>
+              <div class="photo__user-wrapper">
+                <span class="photo__user-info">Максим <span>(40 часов назад)</span></span>
+                <p class="photo__user-comment">Где снег-то?</p>
+                <span class="photo__user-like">Нравится: 150</span>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture></picture>
+              <div class="photo__user-wrapper">
+                <span class="photo__user-info">Надежда <span>(45 часов назад)</span></span>
+                <p class="photo__user-comment">Всем GM и взаимные лайки!</p>
+                <span class="photo__user-like">Нравится: 2560</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="filter">
+        <div class="filter__container">
+          <p class="filter__tagline">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+        <div class="filter__img-wrapper">
+          <picture></picture>
+        </div>
+        <div class="filter__elements-wrapper">
+          <ul class="filter__list">
+            <li class="filter__item">
+              <button class="filter__effect-button" type="button">
+                <span class="visually-hidden">Обрезка</span>
+              </button>
+              <div class="filter__range">
+                <div class="filter__range-line"></div>
+                <button class="filter__range-button" type="button">
+                  <span class="visually-hidden">Изменить значение фильтра</span>
+                </button>
+              </div>
+            </li>
+            <li class="filter__item">
+              <button class="filter__effect-button" type="button">
+                <span class="visually-hidden">Заливка</span>
+              </button>
+              <div class="filter__range">
+                <div class="filter__range-line"></div>
+                <button class="filter__range-button" type="button">
+                  <span class="visually-hidden">Изменить значение фильтра</span>
+                </button>
+              </div>
+            </li>
+            <li class="filter__item">
+              <button class="filter__effect-button" type="button">
+                <span class="visually-hidden">Контраст</span>
+              </button>
+              <div class="filter__range">
+                <div class="filter__range-line"></div>
+                <button class="filter__range-button" type="button">
+                  <span class="visually-hidden">Изменить значение фильтра</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="filter__action-wrapper">
+            <button class="filter__action-button filter__action-button--upload" type="button">Запостить</button>
+            <button class="filter__action-button filter__action-button--cancel" type="button">Отмена</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <a class="site-logo footer__site-logo" href="index.html">
+
+        </a>
+        <ul class="social-list footer__social-list">
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <span class="visually-hidden">Мы в Твиттере</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <span class="visually-hidden">Мы в Фэйсбуке</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <span class="visually-hidden">Мы на Ютубе</span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано <span class="visually-hidden">в HTML Academy</span>
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>

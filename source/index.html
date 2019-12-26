@@ -19,16 +19,16 @@
           <div class="site-navigation__wrapper">
             <ul class="site-navigation__list">
               <li class="site-navigation__item">
-                <a class="site-navigation__link" href="#">Главная</a>
+                <a class="site-navigation__link site-navigation__link--current">Главная</a>
               </li>
               <li class="site-navigation__item">
-                <a class="site-navigation__link" href="#">Фотографии</a>
+                <a class="site-navigation__link" href="photo.html">Фотографии</a>
               </li>
               <li class="site-navigation__item">
-                <a class="site-navigation__link" href="#">Конкурс</a>
+                <a class="site-navigation__link" href="form.html">Конкурс</a>
               </li>
               <li class="site-navigation__item">
-                <a class="site-navigation__link" href="#">HTML Academy</a>
+                <a class="site-navigation__link" href="https://htmlacademy.ru/">HTML Academy</a>
               </li>
             </ul>
           </div>
@@ -127,7 +127,36 @@
         <section class="price main__price">
           <div class="price__container">
             <h2 class="visually-hidden">Приятные цены</h2>
-
+            <table class="price__table">
+              <thead>
+                <tr>
+                  <th class="price__title"></th>
+                  <th class="price__title">База <span>1,99 USD</span></th>
+                  <th class="price__title price__title--hit">Стандарт <span>3,99 USD</span></th>
+                  <th class="price__title">Анлим <span>9,99 USD</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="price__option">Розовый фильтр</td>
+                  <td class="price__option price__option--yes">Розовый фильтр</td>
+                  <td class="price__option price__option--yes">Розовый фильтр</td>
+                  <td class="price__option price__option--yes">Розовый фильтр</td>
+                </tr>
+                <tr>
+                  <td class="price__option">Смайлики</td>
+                  <td class="price__option price__option--no">Смайлики</td>
+                  <td class="price__option price__option--yes">Смайлики</td>
+                  <td class="price__option price__option--yes">Смайлики</td>
+                </tr>
+                <tr>
+                  <td class="price__option">Комментарии</td>
+                  <td class="price__option price__option--no">Комментарии</td>
+                  <td class="price__option price__option--no">Комментарии</td>
+                  <td class="price__option price__option--yes">Комментарии</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>
