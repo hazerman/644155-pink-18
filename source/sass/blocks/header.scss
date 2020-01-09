@@ -1,0 +1,116 @@
+.header {
+  color: $white;
+
+  background-color: #1d2631;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top 0 center;
+  background-size: 100% auto;
+
+  @include from-retina {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @include from-tablet {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: auto;
+
+    @include from-retina {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  @include from-desktop {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  &--no-js {
+    @include no-desktop {
+      background-position: top 49% center;
+    }
+  }
+}
+
+.header__site-navigation {
+  margin-bottom: 7.4%;
+
+  @include from-tablet {
+    margin-bottom: 8.4%;
+  }
+
+  @include from-desktop {
+    margin-bottom: 63px;
+  }
+}
+
+.header__container {
+  @include container;
+  min-height: 148px;
+  padding-bottom: 15%;
+
+  @include from-tablet {
+    min-height: 275px;
+    padding-bottom: 10%;
+  }
+
+  @include from-desktop {
+    padding-bottom: 63px;
+    min-height: 221px;
+  }
+
+  &--index {
+    padding-bottom: 6.5%;
+
+    background-image: url("../img/bg-iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 80.63% auto;
+    background-position: top 24.2% left 0;
+
+    @include from-retina {
+      background-image: url("../img/bg-iphone-hand-mobile@2x.png");
+    }
+
+    @include from-tablet {
+      padding-top: 5.8%;
+      padding-bottom: 15.1%;
+
+      background-image: url("../img/bg-iphone-hand-tablet@1x.png");
+      background-size: 106% auto;
+      background-position: bottom 0 right 50%;
+
+      @include from-retina {
+        background-image: url("../img/bg-iphone-hand-tablet@2x.png");
+      }
+    }
+
+    @include from-desktop {
+      padding-top: 45px;
+      padding-bottom: 113px;
+
+      background-image: url("../img/bg-iphone-hand-desktop@1x.png");
+      background-size: 109.2% auto;
+      background-position: bottom 0 right 131%;
+    }
+  }
+}
+
+.header__promo {
+  width: 100%;
+}
+
+.header__tagline {
+  @include header-tagline;
+  padding-top: 2.4%;
+
+  text-align: center;
+
+  @include from-desktop {
+    padding-top: 0;
+  }
+
+  &--narrow {
+    @include from-desktop {
+      @include padding-center(200px);
+    }
+  }
+}

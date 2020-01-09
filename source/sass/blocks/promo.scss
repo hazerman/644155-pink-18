@@ -1,0 +1,146 @@
+.promo {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  @include from-tablet {
+    width: 48.39%;
+  }
+
+  @include from-desktop {
+    width: 300px;
+  }
+}
+
+.promo__tagline {
+  @include header-tagline;
+  min-height: 58px;
+  margin-bottom: 122.5%;
+
+  @include only-tablet {
+    @include font-size-height(40px, 48px);
+  }
+
+  @include from-tablet {
+    @include padding-center(10%);
+    min-height: 144px;
+    margin-bottom: 10%;
+  }
+
+  @include from-desktop {
+    margin-bottom: 52px;
+  }
+}
+
+.promo__button-download {
+  display: block;
+  width: 100%;
+  padding: 5% 10px 6% 10px;
+  margin-bottom: 12.5%;
+
+  @include font-size-height(18px, 18px);
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+
+  border: 3px solid $white;
+  border-radius: 50px;
+
+  @include from-tablet {
+    padding-bottom: 5.3%;
+    margin-bottom: 15.6%;
+  }
+
+  @include from-desktop {
+    @include font-size-height(21px, 21px);
+    padding-top: 13px;
+    padding-bottom: 15px;
+    margin-bottom: 70px;
+  }
+
+  &:hover {
+    @include from-desktop {
+      color: $pink;
+
+      background-color: $white;
+    }
+  }
+
+  &:active {
+    color: rgba($pink, 0.3);
+
+    background-color: $white;
+  }
+}
+
+.promo__store-list {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: -25px;
+
+  @include from-desktop {
+    margin-bottom: 15px;
+  }
+}
+
+.promo__store-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18%;
+  margin-left: 25px;
+  margin-bottom: 5%;
+
+  @include from-tablet {
+    width: 17%;
+    margin-bottom: 10%;
+  }
+}
+
+.promo__store-link {
+  display: block;
+  height: auto;
+
+  &--apple {
+    width: 85.63%;
+  }
+
+  &--android {
+    width: 76.52%;
+  }
+
+  &--microsoft {
+    width: 80.16%;
+  }
+
+  &:hover {
+    @include from-desktop {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.promo__store-icon {
+  width: 100%;
+  height: auto;
+}
+
+.promo__info {
+  display: block;
+  margin-bottom: 3%;
+
+  @include font-size-height(14px, 24px);
+  font-weight: 300;
+
+  @include from-tablet {
+    font-size: 18px;
+  }
+}

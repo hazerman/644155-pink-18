@@ -1,0 +1,285 @@
+.site-navigation {
+  background-color: rgba($black, 0.3);
+
+  &--show {
+    @include no-desktop {
+      background-color: #283645;
+
+      .site-navigation__container {
+        padding-bottom: 8%;
+        margin-bottom: -1.5%;
+      }
+
+      .site-navigation__button-toggle {
+        width: 26px;
+
+        &::before,
+        &::after {
+          @include pseudo;
+          top: 40%;
+          left: 0;
+
+          width: 115%;
+          height: 5px;
+
+          background-color: $white;
+          border-radius: 2px;
+
+          box-shadow: none;
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+
+        &:hover,
+        &:active {
+          &::before {
+            box-shadow: none;
+          }
+        }
+      }
+
+      .site-navigation__wrapper {
+        display: block;
+
+        background-color: #283645;
+      }
+
+      @include from-tablet {
+        .site-navigation__container {
+          padding-bottom: 6.4%;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &--no-js {
+    @include no-desktop {
+      background-color: #283645;
+
+      .site-navigation__container {
+        padding-bottom: 0;
+      }
+
+      .site-navigation__button-toggle {
+        display: none;
+      }
+
+      .site-navigation__wrapper {
+        position: static;
+
+        display: block;
+        margin-top: 8.5%;
+      }
+    }
+  }
+}
+
+.site-navigation__container {
+  position: relative;
+
+  @include container(0, 0);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 6.5%;
+  padding-bottom: 6.5%;
+
+  @include from-tablet {
+    padding-top: 4.2%;
+    padding-bottom: 6.4%;
+  }
+
+  @include from-desktop {
+    padding-top: 27px;
+    padding-bottom: 42px;
+    align-items: flex-start;
+  }
+}
+
+.site-navigation__site-logo {
+  margin-left: 20px;
+
+  @include from-desktop {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.site-navigation__button-toggle {
+  position: relative;
+
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
+  width: 50px;
+  height: 24px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  @include from-tablet {
+    align-self: flex-end;
+  }
+
+  @include from-desktop {
+    display: none;
+  }
+
+  &::before {
+    @include pseudo;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: $white;
+
+    box-shadow: 0 10px 0 0 $white, 0 20px 0 0 $white;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $pink;
+    }
+
+    &::before {
+      box-shadow: 0 10px 0 0 $pink, 0 20px 0 0 $pink;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: rgba($pink, 0.3);
+    }
+
+    &::before {
+      box-shadow: 0 10px 0 0 rgba($pink, 0.3), 0 20px 0 0 rgba($pink, 0.3);
+    }
+  }
+}
+
+.site-navigation__wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+
+  display: none;
+  width: 100%;
+
+  box-shadow: 0 -1px 0 0 $black;
+
+  @include from-desktop {
+    position: static;
+
+    display: flex;
+    width: 622px;
+    padding-top: 13px;
+
+    box-shadow: none;
+  }
+}
+
+.site-navigation__list {
+  @include list;
+
+  text-align: center;
+
+  @include from-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-grow: 1;
+    margin-left: -80px;
+
+    text-align: left;
+  }
+}
+
+.site-navigation__item {
+  @include from-desktop {
+    margin-left: 80px;
+  }
+}
+
+.site-navigation__link {
+  display: block;
+  width: 100%;
+  padding: 5% 20px 5% 20px;
+
+  @include font-size-height(18px, 32px);
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  box-shadow: 0 -1px 0 0 $black inset, 0 1px 0 0 rgba($white, 0.15) inset;
+
+  &[href] {
+    &:hover {
+      color: $pink;
+    }
+
+    &:active {
+      color: rgba($pink, 0.3);
+
+      @include from-desktop {
+        color: rgba($white, 0.3);
+      }
+    }
+  }
+
+  @include from-tablet {
+    padding-top: 2.4%;
+    padding-bottom: 2.4%;
+  }
+
+  @include from-desktop {
+    padding: 5px 0;
+
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+
+    box-shadow: none;
+  }
+
+  &--current {
+    @include current;
+
+    @include no-desktop {
+      color: rgba($white, 0.5);
+    }
+
+    @include from-desktop {
+      position: relative;
+    }
+
+    &::after {
+      @include from-desktop {
+        @include pseudo(absolute);
+        right: 0;
+        bottom: -9px;
+        left: 0;
+
+        height: 2px;
+
+        background-color: $white;
+      }
+    }
+  }
+}

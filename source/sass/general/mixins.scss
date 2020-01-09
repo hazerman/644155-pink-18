@@ -3,6 +3,64 @@
   line-height: $f-height;
 }
 
+@mixin from-tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin only-mobile {
+  @media (max-width: $tablet-width - 1) {
+    @content;
+  }
+}
+
+@mixin only-tablet {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    @content;
+  }
+}
+
+@mixin no-desktop {
+  @media (max-width: $desktop-width - 1) {
+    @content;
+  }
+}
+
+@mixin from-retina {
+  @media (min-resolution: $retina) {
+    @content;
+  }
+}
+
+@mixin container ($pm: 20px, $pt: 20px, $pd: 10px) {
+  width: 100%;
+
+  @include padding-center($pm);
+
+  @include from-tablet {
+    @if $pt != $pm {
+      @include padding-center($pt);
+    }
+  }
+
+  @include from-desktop {
+    width: $desktop-width;
+
+    @include center;
+
+    @if $pd != $pt {
+      @include padding-center($pd);
+    }
+  }
+}
+
 @mixin list {
   margin: 0;
   padding: 0;
@@ -13,6 +71,22 @@
 @mixin reset-m-p {
   margin: 0;
   padding: 0;
+}
+
+@mixin header-tagline {
+  @include reset-m-p;
+  @include font-size-height(24px, 29px);
+
+  font-weight: 300;
+
+  @include from-tablet {
+    @include font-size-height(50px, 60px);
+  }
+}
+
+@mixin pseudo($pos: absolute, $cont: "") {
+  position: $pos;
+  content: $cont;
 }
 
 @mixin current {

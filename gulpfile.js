@@ -16,6 +16,7 @@ var htmlmin = require("gulp-htmlmin");
 var include = require("posthtml-include");
 var del = require("del");
 var uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
 var server = require("browser-sync").create();
 
 gulp.task("css", function() {
@@ -36,6 +37,7 @@ gulp.task("css", function() {
 gulp.task("js", function() {
   return gulp
     .src("source/js/**/*.js")
+    .pipe(concat("script.js"))
     .pipe(uglify())
     .pipe(
       rename(function(path) {

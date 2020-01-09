@@ -12,12 +12,18 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="header">
-      <nav class="site-navigation header__site-navigation">
+    <header class="header header--no-js">
+      <nav class="site-navigation site-navigation--no-js header__site-navigation">
         <div class="site-navigation__container">
           <a class="site-logo site-navigation__site-logo">
-            <svg>
+            <svg class="site-logo__img site-logo__img--mobile" role="img" width="75" height="22" aria-label="Логотип Pink" focusable="false">
               <use xlink:href="#icon-logo-pink-mobile"></use>
+            </svg>
+            <svg class="site-logo__img site-logo__img--tablet" role="img" width="147" height="40" aria-label="Логотип Pink" focusable="false">
+              <use xlink:href="#icon-logo-pink-tablet-header"></use>
+            </svg>
+            <svg class="site-logo__img site-logo__img--desktop" role="img" width="147" height="40" aria-label="Логотип Pink" focusable="false">
+              <use xlink:href="#icon-logo-pink-desktop-header"></use>
             </svg>
           </a>
           <button class="site-navigation__button-toggle" type="button">
@@ -41,24 +47,33 @@
           </div>
         </div>
       </nav>
-      <div class="header__container">
+      <div class="header__container header__container--index">
         <div class="promo header__promo">
           <p class="promo__tagline">Взгляните на жизнь иначе!</p>
           <a class="promo__button-download" href="https://www.apple.com/ios/app-store/">Скачать приложение</a>
           <ul class="promo__store-list">
             <li class="promo__store-item">
-              <a class="promo__store-link" href="https://www.apple.com/ios/app-store/">
+              <a class="promo__store-link promo__store-link--apple" href="https://www.apple.com/ios/app-store/">
                 <span class="visually-hidden">Наше приложение в App Store</span>
+                <svg class="promo__store-icon" width="47" height="57" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-logo-apple"></use>
+                </svg>
               </a>
             </li>
             <li class="promo__store-item">
-              <a class="promo__store-link" href="https://play.google.com/store/apps">
+              <a class="promo__store-link promo__store-link--android" href="https://play.google.com/store/apps">
                 <span class="visually-hidden">Наше приложение в Google Play</span>
+                <svg class="promo__store-icon" width="42" height="47" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-logo-android"></use>
+                </svg>
               </a>
             </li>
             <li class="promo__store-item">
-              <a class="promo__store-link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+              <a class="promo__store-link promo__store-link--microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
                 <span class="visually-hidden">Наше приложение в Microsoft Store</span>
+                <svg class="promo__store-icon" width="44" height="42" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-logo-microsoft"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -134,7 +149,7 @@
         <section class="price main__price">
           <div class="price__container">
             <h2 class="visually-hidden">Приятные цены</h2>
-            <table class="price__table">
+            <table class="price__table" style="display: none;">
               <thead>
                 <tr>
                   <th class="price__title"></th>
@@ -228,5 +243,6 @@
       </div>
     </footer>
 
+    <script src="js/script.min.js"></script>
   </body>
 </html>

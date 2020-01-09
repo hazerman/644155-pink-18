@@ -1,0 +1,58 @@
+.site-logo {
+  display: block;
+  width: 77px;
+  height: 22px;
+
+  @include from-tablet {
+    width: 147px;
+    height: 40px;
+  }
+
+  &[href] {
+    &:hover {
+      svg {
+        @include from-desktop {
+          fill: $pink;
+        }
+      }
+    }
+
+    &:active {
+      svg {
+        fill: currentColor;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.site-logo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  color: $white;
+  fill: currentColor;
+
+  &--mobile {
+    @include from-tablet {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @include only-tablet {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include from-desktop {
+      display: block;
+    }
+  }
+}
