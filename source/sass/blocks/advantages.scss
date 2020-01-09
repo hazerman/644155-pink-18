@@ -1,0 +1,224 @@
+.advantages {
+  background-image: linear-gradient(174.4deg, $white 24%, $grey 24%);
+
+  @include from-tablet {
+    background-image: linear-gradient(175.6deg, $white 37.5%, $grey 37.5%);
+  }
+
+  @include from-desktop {
+    background-image: linear-gradient(175.7deg, $white 40.3%, $grey 40.3%);
+  }
+}
+
+.advantages__container {
+  @include container;
+  padding-top: 12.6%;
+
+  @include from-tablet {
+    padding-top: 7.5%;
+
+    background-image: url("../img/bg-iphone-screen-3-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom left 20px;
+    background-size: 40.6% auto;
+
+    @include from-retina {
+      background-image: url("../img/bg-iphone-screen-3-tablet@2x.png");
+    }
+  }
+
+  @include from-desktop {
+    padding-top: 67px;
+    padding-bottom: 20px;
+
+    background: none;
+  }
+}
+
+.advantages__tagline {
+  @include main-tagline;
+  text-align: center;
+
+  &--narrow {
+    @include from-tablet {
+      @include padding-center(8%);
+    }
+
+    @include from-desktop {
+      @include padding-center(150px);
+    }
+  }
+
+  + p {
+    margin-top: 10.3%;
+
+    @include from-tablet {
+      margin-top: 0;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 40.5%;
+
+    @include from-tablet {
+      margin-bottom: 19.4%;
+    }
+
+    @include from-desktop {
+      margin-bottom: 75px;
+    }
+  }
+}
+
+.advantages__list {
+  @include list;
+  text-align: center;
+
+  @include from-tablet {
+    width: 50%;
+    margin-left: auto;
+    padding-bottom: 6.6%;
+
+    text-align: left;
+  }
+
+  @include from-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+
+    text-align: center;
+  }
+}
+
+.advantages__item {
+  position: relative;
+
+  margin-bottom: 10.9%;
+
+  @include from-tablet {
+    margin-bottom: 10.6%;
+  }
+
+  @include from-desktop {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    margin-bottom: 45px;
+
+    @include padding-center(5px);
+  }
+
+  &::after {
+    @include pseudo(relative);
+
+    display: none;
+    width: 56.07%;
+    height: 0;
+    padding-bottom: 98.93%;
+
+    @include center;
+    margin-top: 14.6%;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    @include from-desktop {
+      order: -1;
+      display: block;
+      width: 292px;
+      height: 302px;
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 56px;
+    }
+  }
+
+  &:nth-child(3n+1) {
+    @include from-desktop {
+      padding-right: 18px;
+    }
+
+    &::after {
+      @include from-desktop {
+        background-image: url("../img/bg-iphone-screen-1-desktop@1x.png");
+
+        @include from-retina {
+          background-image: url("../img/bg-iphone-screen-1-desktop@2x.png");
+        }
+      }
+    }
+  }
+
+  &:nth-child(3n+2) {
+    &::after {
+      @include from-desktop {
+        background-image: url("../img/bg-iphone-screen-2-desktop@1x.png");
+
+        @include from-retina {
+          background-image: url("../img/bg-iphone-screen-2-desktop@2x.png");
+        }
+      }
+    }
+  }
+
+  &:nth-child(3n+3) {
+    @include from-desktop {
+      padding-left: 20px;
+    }
+
+    &::after {
+      display: block;
+
+      background-image: url("../img/bg-iphone-screen-mobile@1x.png");
+
+      @include from-retina {
+        background-image: url("../img/bg-iphone-screen-mobile@2x.png");
+      }
+
+      @include from-tablet {
+        display: none;
+      }
+
+      @include from-desktop {
+        display: block;
+
+        background-image: url("../img/bg-iphone-screen-3-desktop@1x.png");
+
+        @include from-retina {
+          background-image: url("../img/bg-iphone-screen-3-desktop@2x.png");
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__item-heading {
+  @include reset-m-p;
+  margin-bottom: 4.4%;
+
+  @include font-size-height(18px, 24px);
+  color: $black;
+
+  @include from-desktop {
+    @include font-size-height(30px, 30px);
+    margin-bottom: 24px;
+  }
+}
+
+.advantages__item-description {
+  @include reset-m-p;
+  @include font-size-height(14px, 24px);
+
+  @include from-desktop {
+    @include font-size-height(18px, 30px);
+    @include padding-center(26px);
+  }
+}

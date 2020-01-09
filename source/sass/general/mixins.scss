@@ -73,13 +73,17 @@
   padding: 0;
 }
 
-@mixin header-tagline {
+@mixin main-tagline {
   @include reset-m-p;
   @include font-size-height(24px, 29px);
 
   font-weight: 300;
 
   @include from-tablet {
+    @include font-size-height(40px, 48px);
+  }
+
+  @include from-desktop {
     @include font-size-height(50px, 60px);
   }
 }

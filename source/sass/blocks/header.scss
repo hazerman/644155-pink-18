@@ -22,6 +22,10 @@
 
   @include from-desktop {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @include from-retina {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   &--no-js {
@@ -90,6 +94,10 @@
       background-image: url("../img/bg-iphone-hand-desktop@1x.png");
       background-size: 109.2% auto;
       background-position: bottom 0 right 131%;
+
+      @include from-retina {
+        background-image: url("../img/bg-iphone-hand-desktop@2x.png");
+      }
     }
   }
 }
@@ -99,10 +107,14 @@
 }
 
 .header__tagline {
-  @include header-tagline;
+  @include main-tagline;
   padding-top: 2.4%;
 
   text-align: center;
+
+  @include from-tablet {
+    @include font-size-height(50px, 60px);
+  }
 
   @include from-desktop {
     padding-top: 0;
