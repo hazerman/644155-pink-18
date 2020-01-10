@@ -1,0 +1,115 @@
+.articles {
+  display: none;
+
+  @include font-size-height(14px, 24px);
+
+  @include from-tablet {
+    display: block;
+  }
+
+  @include from-desktop {
+    @include font-size-height(18px, 30px);
+
+    background-color: $grey;
+  }
+}
+
+.articles__container {
+  @include container;
+  padding-top: 14.7%;
+  padding-bottom: 10%;
+
+  @include from-desktop {
+    padding-top: 95px;
+    padding-bottom: 113px;
+  }
+}
+
+.articles__item {
+  position: relative;
+
+  width: 50%;
+  margin-left: auto;
+
+  @include from-desktop {
+    width: 574px;
+  }
+
+  &::after {
+    @include pseudo(absolute, "24");
+    top: -18%;
+    left: -100%;
+
+    display: block;
+    width: 100%;
+    padding-top: 33.2%;
+    padding-left: 20.6%;
+    padding-bottom: 25.6%;
+
+    @include font-size-height(14.55vw, 1);
+    font-weight: 700;
+    color: $pink;
+
+    background-image: url("../img/bg-timer.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 77.1% auto;
+
+    @include from-desktop {
+      top: -94px;
+      left: -366px;
+
+      width: 299px;
+      height: 346px;
+      padding-top: 129px;
+      padding-left: 0;
+      padding-bottom: 0;
+
+      font-size: 120px;
+      text-align: center;
+
+      background-size: 100% auto;
+    }
+  }
+}
+
+.articles__title {
+  @include reset-m-p;
+  width: 55%;
+  margin-bottom: 3.1%;
+
+  @include font-size-height(30px, 36px);
+  color: $black;
+
+  @include from-desktop {
+    margin-bottom: 24px;
+
+    @include font-size-height(30px, 30px);
+  }
+}
+
+.articles__preview {
+  @include reset-m-p;
+  width: 96%;
+  margin-bottom: 3%;
+
+  @include from-desktop {
+    margin-bottom: 31px;
+  }
+}
+
+.article__link {
+  display: block;
+
+  color: $pink;
+
+  &:hover {
+    @include from-desktop {
+      color: $dark-blue;
+    }
+  }
+
+  &:active {
+    color: rgba($dark-blue, 0.3);
+  }
+}
