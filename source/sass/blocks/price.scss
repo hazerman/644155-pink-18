@@ -1,0 +1,283 @@
+.price__container {
+  @include container(0, 20px, 10px);
+  padding-top: 20.3%;
+  padding-bottom: 13.6%;
+
+  @include from-tablet {
+    padding-top: 7.9%;
+    padding-bottom: 8.2%;
+  }
+
+  @include from-desktop {
+    padding-top: 62px;
+    padding-bottom: 75px;
+  }
+}
+
+.price__table-wrapper {
+  @include padding-center(20px);
+  margin-bottom: 11.3%;
+  overflow: hidden;
+
+  @include from-tablet {
+    @include padding-center(0);
+    margin-bottom: 2%;
+  }
+
+  &--no-js {
+    @include only-mobile {
+      overflow-x: scroll;
+    }
+
+    .price__table {
+      @include only-mobile {
+        transform: none;
+      }
+    }
+  }
+}
+
+.price__table {
+  width: 100%;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  transform: translateX(-33.3%);
+
+  @include from-tablet {
+    transform: none;
+  }
+
+}
+
+.price__title {
+  width: calc(100vw - 42px);
+  padding: 2% 2% 2.4% 2%;
+
+  @include font-size-height(18px, 30px);
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $dark-blue;
+  border: 2px solid #e5e5e5;
+  border-top: none;
+  border-bottom: none;
+
+  @include from-tablet {
+    width: 25%;
+    padding-bottom: 1.5%;
+
+    font-size: 16px;
+  }
+
+  @include from-desktop {
+    padding-top: 16px;
+    padding-bottom: 20px;
+
+    font-size: 18px;
+  }
+
+  &--hit {
+    position: relative;
+
+    overflow: hidden;
+
+    &::before {
+      @include pseudo(absolute, "Хит");
+      top: 15%;
+      left: -42%;
+
+      display: block;
+      width: 100%;
+      padding: 0.1% 2%;
+
+      @include font-size-height(14px, 28px);
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+
+      background-color: $pink;
+
+      transform: rotate(-45deg);
+
+      @include from-tablet {
+        top: 8%;
+        left: -37%;
+
+        padding: 0.2% 2%;
+      }
+
+      @include from-desktop {
+        top: 13%;
+        left: -39%;
+      }
+    }
+  }
+
+  span {
+    display: block;
+    margin-top: 0.8%;
+
+    font-size: 24px;
+    font-weight: 300;
+
+    @include from-tablet {
+      margin-top: -1.5%;
+
+      font-size: 18px;
+    }
+
+    @include from-desktop {
+      margin-top: 2px;
+
+      font-size: 24px;
+    }
+  }
+
+  &:first-child {
+    border: none;
+    background-color: transparent;
+
+    @include only-mobile {
+      display: none;
+    }
+  }
+
+  &:nth-child(2) {
+    @include from-tablet {
+      border-left: none;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+  }
+
+  &:last-child {
+    @include from-tablet {
+      border-right: none;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+}
+
+.price__no-border {
+  td {
+    border-top: none;
+
+    &:first-child {
+      @include from-tablet {
+        border-top: 2px solid #e5e5e5;
+      }
+    }
+  }
+}
+
+.price__option {
+
+  padding: 1.9% 2.6% 1.7% 2.6%;
+
+  @include font-size-height(14px, 30px);
+  text-transform: uppercase;
+
+  border: 2px solid #e5e5e5;
+  background-color: $white;
+  background-clip: padding-box;
+
+  @include from-tablet {
+    padding-top: 1.2%;
+    padding-bottom: 1.3%;
+
+    text-transform: none;
+  }
+
+  @include from-desktop {
+    padding: 13px 21px 16px 21px;
+
+    font-size: 18px;
+  }
+
+  &:first-child {
+    @include only-mobile {
+      display: none;
+    }
+  }
+
+  &:not(:first-child) {
+    @include from-tablet {
+      font-size: 1px;
+      color: transparent;
+    }
+  }
+
+  &--no {
+    position: relative;
+
+    &::before,
+    &::after {
+      @include pseudo(absolute);
+      top: 45.64%;
+      right: 4.9%;
+
+      width: 13.1%;
+      height: 0;
+      padding-bottom: 1.25%;
+
+      background-color: #f25b26;
+      border-radius: 2px;
+
+      @include from-tablet {
+        top: 43%;
+        left: 39%;
+        right: 39%;
+
+        width: auto;
+        padding-bottom: 2.4%;
+      }
+
+      @include from-desktop {
+        top: 46%;
+        left: 42%;
+        right: 42%;
+
+        padding-bottom: 0;
+        height: 3px;
+      }
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &--yes {
+    background-image: url("../img/bg-yes.svg");
+    background-repeat: no-repeat;
+    background-size: 11% auto;
+    background-position: top 51% right 6.6%;
+
+    @include from-tablet {
+      background-size: 21.8% auto;
+      background-position: top 50% center;
+    }
+
+    @include from-desktop {
+      background-size: 14% auto;
+    }
+  }
+}
+
+.price__dot-list {
+  @include center;
+  width: 23.5%;
+
+  @include from-tablet {
+    display: none;
+  }
+}

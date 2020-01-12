@@ -122,6 +122,9 @@
         <section class="reviews main__reviews">
           <div class="reviews__container">
             <h2 class="visually-hidden">Благодарные отзывы</h2>
+            <button class="reviews__slide-button reviews__slide-button--prev reviews__slide-button--no-js" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
             <ul class="reviews__list">
               <li class="reviews__item">
                 <blockquote class="reviews__comment">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
@@ -131,56 +134,105 @@
                 </div>
               </li>
               <li class="reviews__item">
-                <blockquote class="reviews__comment">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                <blockquote class="reviews__comment">«Дело в том, что поисковая реклама оправдывает сублимированный целевой трафик. Несмотря на сложности, восприятие марки как всегда непредсказуемо. Тактика выстраивания отношений с коммерсчекими агентами неоднозначна.»</blockquote>
                 <div class="reviews__user">
-                  <cite class="reviews__user-name">Николай Петров</cite>
-                  <span class="reviews__user-info">25 лет, водитель трамвая</span>
+                  <cite class="reviews__user-name">Вася Пупкин</cite>
+                  <span class="reviews__user-info">96 лет, пенсионер</span>
                 </div>
               </li>
               <li class="reviews__item">
-                <blockquote class="reviews__comment">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                <blockquote class="reviews__comment">«Полиряд иллюстрирует самодостаточный гармонический интервал. Мономерная остинатная педаль, по определению, фактурна. Попса, как бы это ни казалось парадоксальным, выстраивает ритмоформульный сет. Пласт, по определению, представляет собой мелодический фьюжн. Цикл, согласно традиционным представлениям, неустойчив.»</blockquote>
                 <div class="reviews__user">
-                  <cite class="reviews__user-name">Николай Петров</cite>
-                  <span class="reviews__user-info">25 лет, водитель трамвая</span>
+                  <cite class="reviews__user-name">Иван Иванов</cite>
+                  <span class="reviews__user-info">5 лет, ходит в садик</span>
                 </div>
               </li>
             </ul>
+            <button class="reviews__slide-button reviews__slide-button--next reviews__slide-button--no-js" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
+            <!-- <ul class="dot-list reviews__dot-list">
+              <li class="dot-list__item">
+                <button class="dot-list__button dot-list__button--active">
+                  <span class="visually-hidden">1 слайд</span>
+                </button>
+              </li>
+              <li class="dot-list__item">
+                <button class="dot-list__button">
+                  <span class="visually-hidden">2 слайд</span>
+                </button>
+              </li>
+              <li class="dot-list__item">
+                <button class="dot-list__button">
+                  <span class="visually-hidden">3 слайд</span>
+                </button>
+              </li>
+            </ul> -->
           </div>
         </section>
 
         <section class="price main__price">
           <div class="price__container">
             <h2 class="visually-hidden">Приятные цены</h2>
-            <table class="price__table" style="display: none;">
-              <thead>
-                <tr>
-                  <th class="price__title"></th>
-                  <th class="price__title">База <span>1,99 USD</span></th>
-                  <th class="price__title price__title--hit">Стандарт <span>3,99 USD</span></th>
-                  <th class="price__title">Анлим <span>9,99 USD</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="price__option">Розовый фильтр</td>
-                  <td class="price__option price__option--yes">Розовый фильтр</td>
-                  <td class="price__option price__option--yes">Розовый фильтр</td>
-                  <td class="price__option price__option--yes">Розовый фильтр</td>
-                </tr>
-                <tr>
-                  <td class="price__option">Смайлики</td>
-                  <td class="price__option price__option--no">Смайлики</td>
-                  <td class="price__option price__option--yes">Смайлики</td>
-                  <td class="price__option price__option--yes">Смайлики</td>
-                </tr>
-                <tr>
-                  <td class="price__option">Комментарии</td>
-                  <td class="price__option price__option--no">Комментарии</td>
-                  <td class="price__option price__option--no">Комментарии</td>
-                  <td class="price__option price__option--yes">Комментарии</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="price__table-wrapper price__table-wrapper--no-js">
+              <table class="price__table">
+                <thead>
+                  <tr>
+                    <th class="price__title"></th>
+                    <th class="price__title">База <span>1,99 USD</span></th>
+                    <th class="price__title price__title--hit price__title--current">Стандарт <span>3,99 USD</span></th>
+                    <th class="price__title">Анлим <span>9,99 USD</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="price__no-border">
+                    <td class="price__option">Розовый фильтр</td>
+                    <td class="price__option price__option--yes">
+                      Розовый фильтр
+                      <span class="visually-hidden">Включено в тариф</span>
+                    </td>
+                    <td class="price__option price__option--yes">
+                      Розовый фильтр
+                      <span class="visually-hidden">Включено в тариф</span>
+                    </td>
+                    <td class="price__option price__option--yes">
+                      Розовый фильтр
+                      <span class="visually-hidden">Включено в тариф</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__option">Смайлики</td>
+                    <td class="price__option price__option--no">
+                      Смайлики
+                      <span class="visually-hidden">Не включено в тариф</span>
+                    </td>
+                    <td class="price__option price__option--yes">
+                      Смайлики
+                      <span class="visually-hidden">Включено в тариф</span>
+                    </td>
+                    <td class="price__option price__option--yes">
+                      Смайлики
+                      <span class="visually-hidden">Включено в тариф</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__option">Комментарии</td>
+                    <td class="price__option price__option--no">
+                      Комментарии
+                      <span class="visually-hidden">Не включено в тариф</span>
+                    </td>
+                    <td class="price__option price__option--no">
+                      Комментарии
+                      <span class="visually-hidden">Не включено в тариф</span>
+                    </td>
+                    <td class="price__option price__option--yes">
+                      Комментарии
+                      <span class="visually-hidden">Включено в тариф</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
       </div>

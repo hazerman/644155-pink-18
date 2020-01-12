@@ -1,0 +1,64 @@
+.dot-list {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+  width: 27%;
+
+  @include from-tablet {
+    width: 12%;
+  }
+}
+
+.dot-list__item {
+  width: 33.33%;
+}
+
+.dot-list__button {
+  position: relative;
+
+  @include center;
+  display: block;
+  width: 80%;
+  padding: 0;
+  padding-bottom: 80%;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &::before {
+    @include pseudo(absolute);
+    top: 50%;
+    left: 50%;
+
+    width: 30%;
+    height: 30%;
+
+    background-color: rgba($dark-blue, 0.3);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &--active {
+    @include current;
+
+    &::before {
+      background-color: transparent;
+      box-shadow: 0 0 0 3px $dark-blue;
+    }
+  }
+
+  &:hover {
+    &::before {
+      background-color: rgba($dark-blue, 0.6);
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba($dark-blue, 0.1);
+    }
+  }
+}

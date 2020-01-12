@@ -1,0 +1,208 @@
+.reviews__container {
+  @include container;
+  padding-top: 13%;
+  padding-bottom: 20%;
+
+  @include from-tablet {
+    padding-top: 9%;
+    padding-bottom: 8%;
+  }
+
+  @include from-desktop {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 71px;
+    padding-bottom: 70px;
+  }
+}
+
+.reviews__list {
+  @include list;
+
+  text-align: center;
+
+  @include from-desktop {
+    width: 690px;
+    padding-top: 114px;
+
+    @include center;
+
+    background-image: url("../img/bg-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 80px auto;
+  }
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10.3%;
+
+  @include from-tablet {
+    margin-bottom: 3.9%;
+  }
+
+  @include from-desktop {
+    margin-bottom: 50px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.reviews__comment {
+  @include reset-m-p;
+  @include font-size-height(14px, 30px);
+
+  @include from-tablet {
+    margin-bottom: 5.6%;
+
+    font-size: 18px;
+  }
+
+  @include from-desktop {
+    margin-bottom: 36px;
+  }
+}
+
+.reviews__user {
+  order: -1;
+  margin-bottom: 4.7%;
+
+  @include from-tablet {
+    order: 1;
+    margin-bottom: 1%;
+  }
+}
+
+.reviews__user-name {
+  display: block;
+
+  @include font-size-height(18px, 30px);
+  font-weight: 700;
+  font-style: normal;
+  color: $black;
+
+  @include from-tablet {
+    margin-bottom: 0.3%;
+
+    font-size: 20px;
+  }
+
+  @include from-desktop {
+    font-size: 24px;
+  }
+}
+
+.reviews__user-info {
+  display: none;
+
+  @include font-size-height(14px, 30px);
+
+  @include from-tablet {
+    display: block;
+  }
+
+  @include from-desktop {
+    font-size: 18px;
+  }
+}
+
+.reviews__dot-list {
+  @include center;
+
+  @include from-desktop {
+    display: none;
+  }
+}
+
+.reviews__slide-button {
+  position: relative;
+
+  display: none;
+  width: 22px;
+  height: 41px;
+  margin-top: 143px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  @include from-desktop {
+    display: block;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo(absolute);
+    top: 19px;
+
+    width: 30px;
+    height: 3px;
+
+    background-color: $dark-blue;
+    opacity: 0.3;
+    border-radius: 3px;
+  }
+
+  &::after {
+    top: 17px;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  &--prev {
+    &::before,
+    &::after {
+      left: 0;
+    }
+
+    &::before {
+      transform-origin: top left;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform-origin: bottom left;
+      transform: rotate(45deg);
+    }
+  }
+
+  &--next {
+    &::before,
+    &::after {
+      right: 0;
+    }
+
+    &::before {
+      transform-origin: top right;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform-origin: bottom right;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--no-js {
+    display: none;
+  }
+}
