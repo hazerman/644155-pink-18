@@ -1,0 +1,547 @@
+.form__main-list {
+  @include list;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include from-tablet {
+    margin-bottom: 67px;
+  }
+
+  @include from-desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 65px;
+  }
+}
+
+.form__main-item {
+  width: 100%;
+
+  @include padding-center(20px);
+  padding-top: 32px;
+  padding-bottom: 25px;
+
+  @include from-tablet {
+    position: relative;
+
+    @include padding-center(58px);
+    padding-top: 45px;
+    padding-bottom: 21px;
+    margin-bottom: 65px;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+  }
+
+  @include from-desktop {
+    padding-top: 42px;
+    padding-bottom: 8px;
+  }
+
+  &:first-child {
+    order: -10;
+  }
+
+  &:last-child {
+    order: 10;
+
+    @include from-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &--order-second {
+    @include only-mobile {
+      order: -9;
+
+      background-color: $grey;
+    }
+  }
+
+  &--order-penultimate {
+    @include only-mobile {
+      order: 9;
+
+      background-color: $grey;
+    }
+  }
+
+  &--no-border {
+    @include from-tablet {
+      @include padding-center(0);
+      padding-bottom: 1px;
+
+      border: none;
+    }
+
+    @include from-desktop {
+      padding-top: 6px;
+      padding-bottom: 0;
+    }
+  }
+
+  &--half-width {
+    @include from-desktop {
+      width: 435px;
+    }
+  }
+}
+
+.form__title {
+  @include reset-m-p;
+  @include padding-center(5%);
+  padding-top: 6px;
+  margin-bottom: 16px;
+
+  @include font-size-height(14px, 18px);
+  font-weight: 400;
+  color: $pink;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--no-mobile {
+    @include only-mobile {
+      @include reset-m-p;
+      @include font-size-height(0, 0);
+    }
+  }
+
+  @include from-tablet {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+
+    @include padding-center(31px);
+    margin: 0;
+    padding-top: 0;
+    // min-width:100%;
+    max-width: 500px;
+
+    background-color: $white;
+
+    transform: translateX(-50%);
+  }
+}
+
+.form__label-wrapper {
+  @include reset-m-p;
+  margin-bottom: 17px;
+
+  @include from-tablet {
+    display: flex;
+  }
+
+  &--name {
+    @include from-tablet {
+      align-items: center;
+      margin-bottom: 52px;
+    }
+
+    @include from-desktop {
+      margin-bottom: 53px;
+    }
+
+    &:last-of-type {
+      @include from-tablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--contact {
+    @include from-tablet {
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
+
+    @include from-desktop {
+      display: inline-flex;
+      width: 375px;
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(2n+1) {
+      @include from-desktop {
+        margin-right: 70px;
+      }
+    }
+
+    &:last-of-type {
+      @include from-tablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.form__label-text {
+  display: block;
+  margin-left: 22px;
+  margin-bottom: 5px;
+
+  @include font-size-height(14px, 30px);
+  color: $pink;
+  text-transform: uppercase;
+
+  &--name {
+    @include from-tablet {
+      margin-top: 3px;
+      margin-right: 18px;
+      margin-left: 0;
+      margin-bottom: 0;
+      max-width: 150px;
+    }
+  }
+
+  &--contact {
+    @include from-tablet {
+      margin-left: 19px;
+    }
+  }
+}
+
+.form__input-text {
+  width: 100%;
+  padding: 14px 20px 15px 20px;
+
+  @include font-size-height(18px, 30px);
+
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+  border-radius: 1px;
+
+  &--name {
+
+  }
+
+  &--contact {
+    @include from-tablet {
+      order: -1;
+      margin-bottom: 10px;
+    }
+  }
+
+  &:hover {
+    @include from-desktop {
+      border-color: $dark-blue;
+    }
+  }
+
+  &:focus {
+    border-color: $pink;
+    outline: none;
+  }
+}
+
+.form__input-text::placeholder {
+  color: $dark-blue;
+}
+
+.form__achievement-list {
+  @include list;
+
+  padding-top: 23px;
+
+  @include from-tablet {
+    padding-top: 7px;
+  }
+
+  @include from-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    margin-bottom: 4px;
+  }
+}
+
+.form__achievement-item {
+  margin-bottom: 43px;
+
+  &:nth-child(2n) {
+    @include from-desktop {
+      order: 1;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 17px;
+
+    @include from-tablet {
+      margin-bottom: 27px;
+    }
+  }
+
+  &:nth-child(6n+1),
+  &:nth-child(6n+2) {
+    @include from-desktop {
+      width: 265px;
+      margin-right: 50px;
+    }
+  }
+
+  &:nth-child(6n+3),
+  &:nth-child(6n+4) {
+    @include from-desktop {
+      width: 245px;
+      margin-right: 50px;
+    }
+  }
+}
+
+.form__app-list {
+  @include list;
+
+  padding-top: 19px;
+
+  @include from-tablet {
+    padding-top: 7px;
+  }
+
+  @include from-desktop {
+    @include padding-center(16px);
+    padding-top: 13px;
+  }
+}
+
+.form__app-item {
+  margin-bottom: 36px;
+
+  @include from-desktop {
+    margin-bottom: 35px;
+  }
+
+  &:last-child {
+    margin-bottom: 17px;
+
+    @include from-tablet {
+      margin-bottom: 33px;
+    }
+  }
+}
+
+.form__label-interactive {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-left: 69px;
+
+  @include font-size-height(18px, 30px);
+
+  cursor: pointer;
+
+  @include from-tablet {
+    padding-left: 59px;
+  }
+
+  &--check {
+    &:hover {
+      &::before {
+        @include from-desktop {
+          border-color: $dark-blue;
+        }
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: $pink;
+      }
+    }
+  }
+
+  &--radio {
+    &:hover {
+      &::before {
+        @include from-desktop {
+          box-shadow: 0 0 0 2px $dark-blue;
+        }
+      }
+    }
+
+    &:active {
+      &::before {
+        box-shadow: 0 0 0 2px $pink;
+        outline: none;
+      }
+    }
+  }
+}
+
+.form__input-check {
+  + label {
+    &::before {
+      @include pseudo(absolute);
+      top: 0;
+      left: 0;
+
+      width: 39px;
+      height: 39px;
+
+      background-color: $white;
+      border: 2px solid #e5e5e5;
+      border-radius: 1px;
+    }
+  }
+
+  &:focus {
+    + label {
+      &::before {
+        border-color: $pink;
+        outline: none;
+      }
+    }
+  }
+}
+
+.form__input-radio {
+  + label {
+    &::before {
+      @include pseudo(absolute);
+      top: 2px;
+      left: 2px;
+
+      width: 35px;
+      height: 35px;
+
+      background-color: $white;
+      border: 10px solid $white;
+      box-shadow: 0 0 0 2px #e5e5e5;
+      border-radius: 50%;
+    }
+  }
+
+  &:checked {
+    + label {
+      &::before {
+        background-color: $pink;
+      }
+    }
+  }
+
+  &:focus {
+    + label {
+      &::before {
+        box-shadow: 0 0 0 2px $pink;
+        outline: none;
+      }
+    }
+  }
+}
+
+.form__textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 201px;
+  padding: 14px 18px 15px;
+
+  @include font-size-height(18px, 30px);
+
+  border: 2px solid #e5e5e5;
+
+  @include from-tablet {
+    min-height: 193px;
+    margin-bottom: 27px;
+  }
+
+  @include from-desktop {
+    min-height: 128px;
+    margin-bottom: 32px;
+  }
+
+  &:hover {
+    @include from-desktop {
+      border-color: $dark-blue;
+    }
+  }
+
+  &:focus {
+    border-color: $pink;
+    outline: none;
+  }
+}
+
+.form__textarea::placeholder {
+  color: $dark-blue;
+}
+
+.form__action {
+  @include padding-center(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include from-tablet {
+    flex-direction: row;
+    @include padding-center(0);
+  }
+}
+
+.form__send-button {
+  width: 100%;
+  padding: 16px 9px 17px;
+  margin-bottom: 35px;
+
+  @include font-size-height(18px, 30px);
+  font-weight: 700;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #2aab6d;
+  border: none;
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  @include from-tablet {
+    width: 48.39%;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  @include from-desktop {
+    width: 300px;
+  }
+
+  &:hover {
+    @include from-desktop {
+      background-color: #1c9b5e;
+    }
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    background-color: #1c9b5e;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+
+    @include current;
+  }
+}
+
+.form__required {
+  @include font-size-height(14px, 30px);
+  text-transform: uppercase;
+
+  b {
+    color: $pink;
+    font-weight: inherit;
+  }
+
+  span {
+    display: none;
+
+    @include from-desktop {
+      display: inline;
+    }
+  }
+}

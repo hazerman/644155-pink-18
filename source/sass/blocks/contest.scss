@@ -1,0 +1,50 @@
+.contest__container {
+  @include container(0, 20px, 10px);
+  width: 100%;
+  padding-top: 45px;
+  padding-bottom: 6px;
+
+  @include from-tablet {
+    padding-top: 92px;
+  }
+
+  @include from-desktop {
+
+  }
+}
+
+.contest__tagline {
+  @include reset-m-p;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 2px;
+
+  @include font-size-height(14px, 30px);
+  text-align: center;
+
+  @include from-tablet {
+    margin: 0;
+    margin-bottom: 26px;
+
+    @include padding-center(5%);
+
+    font-size: 18px;
+  }
+
+  @include from-desktop {
+    @include padding-center(70px);
+    margin-bottom: 78px;
+  }
+
+  span {
+    display: none;
+
+    @include from-tablet {
+      display: inline;
+    }
+  }
+}
+
+.contest__form {
+  width: 100%;
+}

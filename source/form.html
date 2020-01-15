@@ -61,86 +61,88 @@
           <h2 class="visually-hidden">Заполните форму</h2>
           <p class="contest__tagline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
           <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="contest__item-wrapper">
-              <h3 class="visually-hidden">Ваши ФИО</h3>
-              <p class="contest__name-item">
-                <label class="form__name-label" for="user-surname">Фамилия:</label>
-                <input class="form__name-input" name="user-surname" id="user-surname" type="text" placeholder="Укажите фамилию *" required>
-              </p>
-              <p class="contest__name-item">
-                <label class="form__name-label" for="user-name">Имя:</label>
-                <input class="form__name-input" name="user-name" id="user-name" type="text" placeholder="Введите ваше имя *" required>
-              </p>
-              <p class="contest__name-item">
-                <label class="form__name-label" for="user-fname">Отчество:</label>
-                <input class="form__name-input" name="user-fname" id="user-fname" type="text" placeholder="Ну и отчество тоже">
-              </p>
-            </div>
-            <div class="contest__item-wrapper">
-              <h3 class="contest__title">С каким приложением путешествовали?</h3>
-              <ul class="contest__app-list">
-                <li class="contest__app-item">
-                  <input class="form__radio-input visually-hidden" type="radio" name="user-app" id="app-ios" checked>
-                  <label class="form__interactive-label" for="app-ios">Pink для iOS</label>
-                </li>
-                <li class="contest__app-item">
-                  <input class="form__radio-input visually-hidden" type="radio" name="user-app" id="app-android">
-                  <label class="form__interactive-label" for="app-android">Pink на Android</label>
-                </li>
-                <li class="contest__app-item">
-                  <input class="form__radio-input visually-hidden" type="radio" name="user-app" id="app-windows">
-                  <label class="form__interactive-label" for="app-windows">Windows Phone</label>
-                </li>
-              </ul>
-            </div>
-            <div class="contest__item-wrapper">
-              <h3 class="contest__title">Контактная информация</h3>
-              <p class="contest__contact-item">
-                <label class="form__contact-label" for="user-phone-number">Номер телефона</label>
-                <input class="form__contact-input" name="user-phone-number" id="user-phone-number" type="tel" inputmode="tel" placeholder="Номер, пожалуйста">
-              </p>
-              <p class="contest__contact-item">
-                <label class="form__contact-label" for="user-email">Адрес почты</label>
-                <input class="form__contact-input" name="user-email" id="user-email" type="email" inputmode="email" placeholder="Введите почту *" required>
-              </p>
-            </div>
-            <div class="contest__item-wrapper">
-              <h3 class="contest__title">Ваши безбашенные достижения в путешествии</h3>
-              <ul class="contest__achievement-list">
-                <li class="contest__achievement-item">
-                  <input class="form__check-input visually-hidden" type="checkbox" name="activity-selfie" id="activity-selfie" checked>
-                  <label for="activity-selfie" class="form__interactive-label">Сделал селфи с акулой</label>
-                </li>
-                <li class="contest__achievement-item">
-                  <input class="form__check-input visually-hidden" type="checkbox" name="activity-scorch" id="activity-scorch" checked>
-                  <label for="activity-scorch" class="form__interactive-label">Обгорел на пляже</label>
-                </li>
-                <li class="contest__achievement-item">
-                  <input class="form__check-input visually-hidden" type="checkbox" name="activity-chuck" id="activity-chuck">
-                  <label for="activity-chuck" class="form__interactive-label">Видел Чака Норриса</label>
-                </li>
-                <li class="contest__achievement-item">
-                  <input class="form__check-input visually-hidden" type="checkbox" name="activity-souvenir" id="activity-souvenir">
-                  <label for="activity-souvenir" class="form__interactive-label">Накупил сувениров</label>
-                </li>
-                <li class="contest__achievement-item">
-                  <input class="form__check-input visually-hidden" type="checkbox" name="activity-tower" id="activity-tower" checked>
-                  <label for="activity-tower" class="form__interactive-label">Удержал башню</label>
-                </li>
-                <li class="contest__achievement-item">
-                  <input class="form__check-input visually-hidden" type="checkbox" name="activity-hotel" id="activity-hotel">
-                  <label for="activity-hotel" class="form__interactive-label">Разгромил отель</label>
-                </li>
-              </ul>
-            </div>
-            <div class="contest__item-wrapper">
-              <h3 class="contest__title">Опишите свои эмоции</h3>
-              <label class="visually-hidden" for="user-feelings">Пишите здесь</label>
-              <textarea name="user-feelings" id="user-feelings" cols="30" rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
-            </div>
+            <ul class="form__main-list">
+              <li class="form__main-item form__main-item--no-border form__main-item--half-width">
+                <h3 class="visually-hidden">Ваши ФИО</h3>
+                <p class="form__label-wrapper form__label-wrapper--name">
+                  <label class="form__label-text form__label-text--name" for="user-surname">Фамилия:</label>
+                  <input class="form__input-text form__input-text--name" name="user-surname" id="user-surname" type="text" placeholder="Укажите фамилию *" required>
+                </p>
+                <p class="form__label-wrapper form__label-wrapper--name">
+                  <label class="form__label-text form__label-text--name" for="user-name">Имя:</label>
+                  <input class="form__input-text form__input-text--name" name="user-name" id="user-name" type="text" placeholder="Введите ваше имя *" required>
+                </p>
+                <p class="form__label-wrapper form__label-wrapper--name">
+                  <label class="form__label-text form__label-text--name" for="user-fname">Отчество:</label>
+                  <input class="form__input-text form__input-text--name" name="user-fname" id="user-fname" type="text" placeholder="Ну и отчество тоже">
+                </p>
+              </li>
+              <li class="form__main-item form__main-item--order-penultimate form__main-item--half-width">
+                <h3 class="form__title">С каким приложением путешествовали?</h3>
+                <ul class="form__app-list">
+                  <li class="form__app-item">
+                    <input class="form__input-radio visually-hidden" type="radio" name="user-app" id="app-ios" checked>
+                    <label class="form__label-interactive form__label-interactive--radio" for="app-ios">Pink для iOS</label>
+                  </li>
+                  <li class="form__app-item">
+                    <input class="form__input-radio visually-hidden" type="radio" name="user-app" id="app-android">
+                    <label class="form__label-interactive form__label-interactive--radio" for="app-android">Pink на Android</label>
+                  </li>
+                  <li class="form__app-item">
+                    <input class="form__input-radio visually-hidden" type="radio" name="user-app" id="app-windows">
+                    <label class="form__label-interactive form__label-interactive--radio" for="app-windows">Windows Phone</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="form__main-item">
+                <h3 class="form__title form__title--no-mobile">Контактная информация</h3>
+                <p class="form__label-wrapper form__label-wrapper--contact">
+                  <label class="form__label-text form__label-text--contact" for="user-phone-number">Номер телефона</label>
+                  <input class="form__input-text form__input-text--contact" name="user-phone-number" id="user-phone-number" type="tel" inputmode="tel" placeholder="Номер, пожалуйста">
+                </p>
+                <p class="form__label-wrapper form__label-wrapper--contact">
+                  <label class="form__label-text form__label-text--contact" for="user-email">Адрес почты</label>
+                  <input class="form__input-text form__input-text--contact" name="user-email" id="user-email" type="email" inputmode="email" placeholder="Введите почту *" required>
+                </p>
+              </li>
+              <li class="form__main-item form__main-item--order-second">
+                <h3 class="form__title">Ваши безбашенные достижения в путешествии</h3>
+                <ul class="form__achievement-list">
+                  <li class="form__achievement-item">
+                    <input class="form__input-check visually-hidden" type="checkbox" name="activity-selfie" id="activity-selfie" checked>
+                    <label class="form__label-interactive form__label-interactive--check" for="activity-selfie">Сделал селфи с акулой</label>
+                  </li>
+                  <li class="form__achievement-item">
+                    <input class="form__input-check visually-hidden" type="checkbox" name="activity-scorch" id="activity-scorch" checked>
+                    <label class="form__label-interactive form__label-interactive--check" for="activity-scorch">Обгорел на пляже</label>
+                  </li>
+                  <li class="form__achievement-item">
+                    <input class="form__input-check visually-hidden" type="checkbox" name="activity-chuck" id="activity-chuck">
+                    <label class="form__label-interactive form__label-interactive--check" for="activity-chuck">Видел Чака Норриса</label>
+                  </li>
+                  <li class="form__achievement-item">
+                    <input class="form__input-check visually-hidden" type="checkbox" name="activity-souvenir" id="activity-souvenir">
+                    <label class="form__label-interactive form__label-interactive--check" for="activity-souvenir">Накупил сувениров</label>
+                  </li>
+                  <li class="form__achievement-item">
+                    <input class="form__input-check visually-hidden" type="checkbox" name="activity-tower" id="activity-tower" checked>
+                    <label class="form__label-interactive form__label-interactive--check" for="activity-tower">Удержал башню</label>
+                  </li>
+                  <li class="form__achievement-item">
+                    <input class="form__input-check visually-hidden" type="checkbox" name="activity-hotel" id="activity-hotel">
+                    <label class="form__label-interactive form__label-interactive--check" for="activity-hotel">Разгромил отель</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="form__main-item">
+                <h3 class="form__title">Опишите свои эмоции</h3>
+                <label class="visually-hidden" for="user-feelings">Пишите здесь</label>
+                <textarea class="form__textarea" name="user-feelings" id="user-feelings" cols="30" rows="2" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </li>
+            </ul>
             <div class="form__action">
-              <button class="form__send-button" type="submit">Отправить</button>
-              <small class="form__required">* — обязательные для заполнения поля</small>
+              <button class="form__send-button" type="submit">Отправить форму</button>
+              <small class="form__required"><b>*</b> — обязательные <span>для заполнения</span> поля</small>
             </div>
           </form>
         </div>
