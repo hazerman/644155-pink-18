@@ -213,10 +213,6 @@
   border: 2px solid #e5e5e5;
   border-radius: 1px;
 
-  &--name {
-
-  }
-
   &--contact {
     @include from-tablet {
       order: -1;
@@ -478,6 +474,7 @@
 
   @include from-tablet {
     flex-direction: row;
+
     @include padding-center(0);
   }
 }
