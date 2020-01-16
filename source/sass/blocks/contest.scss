@@ -2,14 +2,15 @@
   @include container(0, 20px, 10px);
   width: 100%;
   padding-top: 45px;
-  padding-bottom: 6px;
+  padding-bottom: 15px;
 
   @include from-tablet {
     padding-top: 92px;
+    padding-bottom: 50px;
   }
 
   @include from-desktop {
-
+    padding-bottom: 0;
   }
 }
 

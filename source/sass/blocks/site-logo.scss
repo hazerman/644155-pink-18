@@ -24,6 +24,23 @@
       }
     }
   }
+
+  &--footer {
+    width: 147px;
+    height: 40px;
+
+    .site-logo__img {
+      color: $black;
+
+      &--tablet {
+        display: block;
+
+        @include from-desktop {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .site-logo__img {
