@@ -1,15 +1,17 @@
 .photo__container {
   @include container;
   padding-top: 45px;
+  padding-bottom: 10px;
 
   overflow: hidden;
 
   @include from-tablet {
     padding-top: 92px;
+    padding-bottom: 25px;
   }
 
   @include from-desktop {
-
+    padding-bottom: 3px;
   }
 }
 
@@ -161,6 +163,7 @@
 }
 
 .photo__img-wrapper {
+  display: block;
   width: 100%;
   height: auto;
 }
