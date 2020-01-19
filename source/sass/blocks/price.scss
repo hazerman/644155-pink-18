@@ -28,12 +28,6 @@
     @include only-mobile {
       overflow-x: scroll;
     }
-
-    .price__table {
-      @include only-mobile {
-        transform: none;
-      }
-    }
   }
 }
 
@@ -43,10 +37,24 @@
   table-layout: fixed;
   border-collapse: collapse;
 
-  transform: translateX(-33.3%);
+  transition: transform 500ms ease-out;
 
-  @include from-tablet {
-    transform: none;
+  &--show-1-slide {
+    @include only-mobile {
+      transform: translateX(0);
+    }
+  }
+
+  &--show-2-slide {
+    @include only-mobile {
+      transform: translateX(-33.3%);
+    }
+  }
+
+  &--show-3-slide {
+    @include only-mobile {
+      transform: translateX(-66.6%);
+    }
   }
 }
 
