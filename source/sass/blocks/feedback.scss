@@ -1,11 +1,11 @@
 .feedback__container {
   @include container;
-  padding-top: 13%;
-  padding-bottom: 6.7%;
+  padding-top: 42px;
+  padding-bottom: 21px;
 
   @include from-tablet {
-    padding-top: 7%;
-    padding-bottom: 3.6%;
+    padding-top: 46px;
+    padding-bottom: 24px;
   }
 
   @include from-desktop {
@@ -16,13 +16,13 @@
 
 .feedback__tagline {
   @include main-tagline;
-  margin-bottom: 12%;
+  margin-bottom: 33px;
 
   text-align: center;
 
   @include from-tablet {
     @include padding-center(20%);
-    margin-bottom: 6.9%;
+    margin-bottom: 43px;
   }
 
   @include from-desktop {
@@ -43,11 +43,11 @@
 }
 
 .feedback__item {
-  margin-bottom: 6.9%;
+  margin-bottom: 20px;
 
   @include from-tablet {
     width: 48%;
-    margin-bottom: 7.5%;
+    margin-bottom: 46px;
   }
 
   @include from-desktop {
@@ -62,7 +62,7 @@
   }
 
   &:nth-child(2) {
-    margin-bottom: 9%;
+    margin-bottom: 26px;
 
     @include from-tablet {
       margin-bottom: 0;
@@ -101,7 +101,7 @@
   font-weight: 700;
 
   @include from-tablet {
-    margin-bottom: 1%;
+    margin-bottom: 3px;
   }
 
   @include from-desktop {
@@ -194,6 +194,6 @@
   @include from-desktop {
     @include center;
     width: 960px;
-    height: 481px;
+    height: 478px;
   }
 }

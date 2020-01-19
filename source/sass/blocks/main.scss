@@ -3,10 +3,10 @@
 }
 
 .main__wrapper {
-  background-image: linear-gradient(175.6deg, $white 44.5%, $grey 44.5%);
+  background-image: linear-gradient(175.6deg, $white 376px, $grey 376px);
 
   @include from-tablet {
-    background-image: linear-gradient(175.6deg, $white 49.2%, $grey 49.2%);
+    background-image: linear-gradient(175.6deg, $white 363px, $grey 363px);
   }
 
   @include from-desktop {

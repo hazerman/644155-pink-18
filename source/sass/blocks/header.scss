@@ -30,16 +30,16 @@
 
   &--no-js {
     @include no-desktop {
-      background-position: top 49% center;
+      background-position: top 259px center;
     }
   }
 }
 
 .header__site-navigation {
-  margin-bottom: 7.4%;
+  margin-bottom: 23px;
 
   @include from-tablet {
-    margin-bottom: 8.4%;
+    margin-bottom: 55px;
   }
 
   @include from-desktop {
@@ -50,7 +50,7 @@
 .header__container {
   @include container;
   min-height: 148px;
-  padding-bottom: 15%;
+  padding-bottom: 48px;
 
   @include from-tablet {
     min-height: 275px;
@@ -63,24 +63,16 @@
   }
 
   &--index {
-    padding-bottom: 6.5%;
-
-    background-image: url("../img/bg-iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-size: 80.63% auto;
-    background-position: top 24.2% left 0;
-
-    @include from-retina {
-      background-image: url("../img/bg-iphone-hand-mobile@2x.png");
-    }
+    padding-bottom: 21px;
 
     @include from-tablet {
-      padding-top: 5.8%;
-      padding-bottom: 15.1%;
+      padding-top: 38px;
+      padding-bottom: 100px;
 
       background-image: url("../img/bg-iphone-hand-tablet@1x.png");
-      background-size: 106% auto;
-      background-position: bottom 0 right 50%;
+      background-repeat: no-repeat;
+      background-position: bottom right -20px;
+      background-size: 700px auto;
 
       @include from-retina {
         background-image: url("../img/bg-iphone-hand-tablet@2x.png");
@@ -92,12 +84,8 @@
       padding-bottom: 113px;
 
       background-image: url("../img/bg-iphone-hand-desktop@1x.png");
-      background-size: 109.2% auto;
-      background-position: bottom 0 right 131%;
-
-      @include from-retina {
-        background-image: url("../img/bg-iphone-hand-desktop@2x.png");
-      }
+      background-size: 1050px auto;
+      background-position: bottom right -116px;
     }
   }
 }
@@ -108,11 +96,13 @@
 
 .header__tagline {
   @include main-tagline;
-  padding-top: 2.4%;
+  padding-top: 7px;
 
   text-align: center;
 
   @include from-tablet {
+    padding-top: 15px;
+
     @include font-size-height(50px, 60px);
   }
 

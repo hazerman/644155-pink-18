@@ -16,8 +16,8 @@
 
 .articles__container {
   @include container;
-  padding-top: 14.7%;
-  padding-bottom: 10%;
+  padding-top: 97px;
+  padding-bottom: 66px;
 
   @include from-desktop {
     padding-top: 95px;
@@ -37,18 +37,21 @@
 
   &::after {
     @include pseudo(absolute, "24");
-    top: -18%;
+    top: -38px;
     left: -100%;
 
     display: block;
-    width: 100%;
-    padding-top: 33.2%;
-    padding-left: 20.6%;
-    padding-bottom: 25.6%;
+    width: 310px;
+    height: 310px;
+    padding-top: 103px;
+    padding-left: 60px;
+    padding-right: 132px;
+    padding-bottom: 79px;
 
-    @include font-size-height(14.55vw, 1);
+    @include font-size-height(96px, 96px);
     font-weight: 700;
     color: $pink;
+    text-align: center;
 
     background-image: url("../img/bg-timer.svg");
     background-repeat: no-repeat;
@@ -61,12 +64,12 @@
 
       width: 299px;
       height: 346px;
-      padding-top: 129px;
+      padding-top: 141px;
       padding-left: 0;
+      padding-right: 0;
       padding-bottom: 0;
 
       font-size: 120px;
-      text-align: center;
 
       background-size: 100% auto;
     }
@@ -76,7 +79,7 @@
 .articles__title {
   @include reset-m-p;
   width: 55%;
-  margin-bottom: 3.1%;
+  margin-bottom: 10px;
 
   @include font-size-height(30px, 36px);
   color: $black;
@@ -91,7 +94,7 @@
 .articles__preview {
   @include reset-m-p;
   width: 96%;
-  margin-bottom: 3%;
+  margin-bottom: 9px;
 
   @include from-desktop {
     margin-bottom: 31px;

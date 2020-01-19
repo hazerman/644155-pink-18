@@ -1,5 +1,5 @@
 .advantages {
-  background-image: linear-gradient(174.4deg, $white 24%, $grey 24%);
+  background-image: linear-gradient(174.4deg, $white 247px, $grey 247px);
 
   @include from-tablet {
     background-image: linear-gradient(175.6deg, $white 37.5%, $grey 37.5%);
@@ -12,15 +12,15 @@
 
 .advantages__container {
   @include container;
-  padding-top: 12.6%;
+  padding-top: 40px;
 
   @include from-tablet {
-    padding-top: 7.5%;
+    padding-top: 50px;
 
     background-image: url("../img/bg-iphone-screen-3-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: bottom left 20px;
-    background-size: 40.6% auto;
+    background-size: 268px auto;
 
     @include from-retina {
       background-image: url("../img/bg-iphone-screen-3-tablet@2x.png");
@@ -50,7 +50,7 @@
   }
 
   + p {
-    margin-top: 10.3%;
+    margin-top: 29px;
 
     @include from-tablet {
       margin-top: 0;
@@ -58,7 +58,7 @@
   }
 
   &:last-of-type {
-    margin-bottom: 40.5%;
+    margin-bottom: 113px;
 
     @include from-tablet {
       margin-bottom: 19.4%;
@@ -96,10 +96,10 @@
 .advantages__item {
   position: relative;
 
-  margin-bottom: 10.9%;
+  margin-bottom: 31px;
 
   @include from-tablet {
-    margin-bottom: 10.6%;
+    margin-bottom: 35px;
   }
 
   @include from-desktop {
@@ -120,7 +120,7 @@
     padding-bottom: 98.93%;
 
     @include center;
-    margin-top: 14.6%;
+    margin-top: 41px;
 
     background-position: top center;
     background-repeat: no-repeat;
@@ -202,7 +202,7 @@
 
 .advantages__item-heading {
   @include reset-m-p;
-  margin-bottom: 4.4%;
+  margin-bottom: 12px;
 
   @include font-size-height(18px, 24px);
   color: $black;

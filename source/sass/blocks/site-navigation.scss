@@ -6,8 +6,13 @@
       background-color: #283645;
 
       .site-navigation__container {
-        padding-bottom: 8%;
-        margin-bottom: -1.5%;
+        padding-bottom: 25px;
+        margin-bottom: -4px;
+
+        @include from-tablet {
+          padding-bottom: 42px;
+          margin-bottom: 0;
+        }
       }
 
       .site-navigation__button-toggle {
@@ -49,18 +54,13 @@
 
         background-color: #283645;
       }
-
-      @include from-tablet {
-        .site-navigation__container {
-          padding-bottom: 6.4%;
-          margin-bottom: 0;
-        }
-      }
     }
   }
 
   &--no-js {
     @include no-desktop {
+      margin-bottom: 22px;
+
       background-color: #283645;
 
       .site-navigation__container {
@@ -75,7 +75,7 @@
         position: static;
 
         display: block;
-        margin-top: 8.5%;
+        margin-top: 27px;
       }
     }
   }
@@ -89,12 +89,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 6.5%;
-  padding-bottom: 6.5%;
+  padding-top: 21px;
+  padding-bottom: 21px;
 
   @include from-tablet {
-    padding-top: 4.2%;
-    padding-bottom: 6.4%;
+    padding-top: 28px;
+    padding-bottom: 42px;
   }
 
   @include from-desktop {
@@ -105,7 +105,7 @@
 }
 
 .site-navigation__site-logo {
-  margin-left: 20px;
+  margin-left: 19px;
 
   @include from-desktop {
     margin-left: 0;
@@ -219,7 +219,7 @@
 .site-navigation__link {
   display: block;
   width: 100%;
-  padding: 5% 20px 5% 20px;
+  padding: 16px 20px;
 
   @include font-size-height(18px, 32px);
   font-weight: 700;
@@ -241,11 +241,6 @@
         color: rgba($white, 0.3);
       }
     }
-  }
-
-  @include from-tablet {
-    padding-top: 2.4%;
-    padding-bottom: 2.4%;
   }
 
   @include from-desktop {
