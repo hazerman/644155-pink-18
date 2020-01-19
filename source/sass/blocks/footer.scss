@@ -67,6 +67,21 @@
   @include from-desktop {
     font-size: 18px;
   }
+
+  &:hover {
+    .footer__developer-icon {
+      @include from-desktop {
+        fill: $dark-blue;
+      }
+    }
+  }
+
+  &:active {
+    .footer__developer-icon {
+      fill: $dark-blue;
+      opacity: 0.3;
+    }
+  }
 }
 
 .footer__developer-icon {
