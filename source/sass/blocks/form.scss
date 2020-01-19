@@ -385,6 +385,17 @@
     }
   }
 
+  &:checked {
+    + label {
+      &::before {
+        background-image: url("../img/bg-check.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 22px auto;
+      }
+    }
+  }
+
   &:focus {
     + label {
       &::before {
