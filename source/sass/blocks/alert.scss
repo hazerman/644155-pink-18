@@ -1,0 +1,114 @@
+.alert {
+  padding: 40px 20px 50px;
+  text-align: center;
+
+  @include from-tablet {
+    padding: 37px 75px 52px;
+  }
+
+  @include from-desktop {
+    padding: 42px 160px 53px;
+
+    box-shadow: 0 -163px 0 0 $grey inset, 0 7px 15px 0 rgba($black, 0.15);
+  }
+
+  &--success {
+    @include no-desktop {
+      box-shadow: 0 -161px 0 0 $grey inset, 0 7px 15px 0 rgba($black, 0.15);
+    }
+
+    .alert__message {
+      margin-bottom: 79px;
+
+      @include from-tablet {
+        margin-bottom: 82px;
+      }
+
+      @include from-desktop {
+        margin-bottom: 86px;
+      }
+    }
+  }
+
+  &--error {
+    .alert__close-button {
+      @include from-desktop {
+        width: 300px;
+      }
+    }
+  }
+}
+
+.alert__title {
+  @include reset-m-p;
+  margin-bottom: 26px;
+
+  @include font-size-height(18px, 24px);
+  font-weight: 700;
+  color: $black;
+
+  @include from-tablet {
+    @include font-size-height(30px, 40px);
+    margin-bottom: 21px;
+  }
+
+  @include from-desktop {
+    margin-bottom: 22px;
+  }
+}
+
+.alert__message {
+  @include reset-m-p;
+  margin-bottom: 38px;
+
+  @include font-size-height(14px, 24px);
+  color: $dark-blue;
+
+  @include from-tablet {
+    font-size: 18px;
+  }
+
+  @include from-desktop {
+    @include center;
+    width: 390px;
+    margin-bottom: 109px;
+  }
+}
+
+.alert__close-button {
+  display: block;
+  width: 100%;
+  padding: 16px 10px 17px;
+
+  @include font-size-height(18px, 30px);
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: #2aab6d;
+  border: none;
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  @include from-tablet {
+    @include center;
+    width: 96.77%;
+  }
+
+  @include from-desktop {
+    width: 100%;
+  }
+
+  &:hover {
+    @include from-desktop {
+      background-color: #1c9b5e;
+    }
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    background-color: #1c9b5e;
+  }
+}

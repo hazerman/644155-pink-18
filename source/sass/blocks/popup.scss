@@ -1,0 +1,27 @@
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 0;
+
+  display: none;
+  width: 100%;
+
+  background-color: $white;
+
+  box-shadow: 0 7px 15px 0 rgba($black, 0.15);
+
+  @include from-tablet {
+    width: 69.7%;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  @include from-desktop {
+    width: 780px;
+  }
+
+  &--show {
+    display: block;
+  }
+}
