@@ -87,12 +87,19 @@
     @include from-desktop {
       width: 435px;
     }
+
+    .form__title {
+      @include from-desktop {
+        max-width: 380px;
+      }
+    }
   }
 }
 
 .form__title {
   @include reset-m-p;
   @include padding-center(5%);
+  width: 100%;
   padding-top: 6px;
   margin-bottom: 16px;
 
@@ -117,7 +124,7 @@
     @include padding-center(31px);
     margin: 0;
     padding-top: 0;
-    // min-width:100%;
+    width: fit-content;
     max-width: 500px;
 
     background-color: $white;
@@ -153,6 +160,8 @@
 
   &--contact {
     @include from-tablet {
+      position: relative;
+
       flex-direction: column;
       margin-bottom: 24px;
     }
@@ -173,6 +182,39 @@
       @include from-tablet {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+.form__label-icon {
+  display: none;
+
+  @include from-tablet {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 59px;
+    padding-right: 1px;
+
+    background-color: #e5e5e5;
+  }
+
+  &--phone {
+    svg {
+      width: 20px;
+      height: 19px;
+    }
+  }
+
+  &--mail {
+    svg {
+      width: 18px;
+      height: 13px;
     }
   }
 }
@@ -262,6 +304,12 @@
     }
   }
 
+  &:nth-child(n+7) {
+    @include from-desktop {
+      order: 2;
+    }
+  }
+
   &:last-child {
     margin-bottom: 17px;
 
@@ -270,16 +318,18 @@
     }
   }
 
-  &:nth-child(6n+1),
-  &:nth-child(6n+2) {
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3n+1):not(:nth-child(1)):not(:nth-child(4)) {
     @include from-desktop {
       width: 265px;
       margin-right: 50px;
     }
   }
 
-  &:nth-child(6n+3),
-  &:nth-child(6n+4) {
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(3n-1):not(:nth-child(2)):not(:nth-child(5)) {
     @include from-desktop {
       width: 245px;
       margin-right: 50px;

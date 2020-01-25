@@ -2,13 +2,17 @@
   @include list;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .social-list__item {
   width: 51px;
   height: 51px;
   margin-bottom: 10px;
+
+  &:nth-of-type(3n-1) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 
 .social-list__link {
