@@ -262,6 +262,8 @@
     }
   }
 
+
+
   &:hover {
     @include from-desktop {
       border-color: $dark-blue;
@@ -271,6 +273,20 @@
   &:focus {
     border-color: $pink;
     outline: none;
+  }
+
+  &--error {
+    border-color: rgba(#ff0000, 1);
+
+    &:hover {
+      @include from-desktop {
+        border-color: rgba(#ff0000, 1);
+      }
+    }
+
+    &:focus {
+      border-color: rgba(#ff0000, 1);
+    }
   }
 }
 
