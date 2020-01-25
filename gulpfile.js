@@ -36,8 +36,20 @@ gulp.task("css", function() {
 
 gulp.task("js", function() {
   return gulp
-    .src("source/js/**/*.js")
+    .src("source/js/*.js")
     .pipe(concat("script.js"))
+    .pipe(uglify())
+    .pipe(
+      rename(function(path) {
+        path.basename += ".min";
+      })
+    )
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("jsPolyfills", function() {
+  return gulp
+    .src("source/js/polyfills/*.js")
     .pipe(uglify())
     .pipe(
       rename(function(path) {
@@ -120,7 +132,7 @@ gulp.task("refresh", function(done) {
 
 gulp.task(
   "build",
-  gulp.series("clean", "copy", "css", "js", "images", "webp", "sprite", "html")
+  gulp.series("clean", "copy", "css", "js", "jsPolyfills", "images", "webp", "sprite", "html")
 );
 
 gulp.task("start", gulp.series("build", "server"));
