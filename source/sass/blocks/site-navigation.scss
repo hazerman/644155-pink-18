@@ -99,7 +99,7 @@
 
   @include from-desktop {
     padding-top: 27px;
-    padding-bottom: 42px;
+    padding-bottom: 32px;
     align-items: flex-start;
   }
 }
@@ -213,6 +213,7 @@
 .site-navigation__item {
   @include from-desktop {
     margin-left: 80px;
+    margin-bottom: 10px;
   }
 }
 
